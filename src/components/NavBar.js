@@ -2,6 +2,8 @@ import React from "react";
 import { Roboto, Roboto_Flex } from "next/font/google"
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { GithubIcon, InstaIcon, LinkedinIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 const roboto = Roboto_Flex({
     subsets: ['latin'],
@@ -15,10 +17,11 @@ const CustomLink = ({ href, title, className = "" }) => {
         <Link href={href} className={`${className} relative group`}>
             {title}
 
-            <span className="h-[1px] inline-block w-0 bg-dark
-             absolute left-0 -bottom-0.5 
-             group-hover:w-full transition-[width] ease duration-300"
-             >&nbsp;</span>
+            <span className={`h-[1px] inline-block bg-dark
+             absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+             ${router.asPath === href ? 'w-full' : 'w-0'}
+             `}
+            >&nbsp;</span>
         </Link>
     )
 }
@@ -31,10 +34,27 @@ const NavBar = () => {
                 <CustomLink href="/about" title="Sobre mim" className="mx-4" />
                 <CustomLink href="/projects" title="Projetos" className="ml-4" />
             </nav>
-            <nav>
-                <Link href="/" target={"_blank"}>L</Link>
-                <Link href="/" target={"_blank"}>L</Link>
-                <Link href="/" target={"_blank"}>L</Link>
+            <nav className="flex items-center justify-center flex-wrap">
+                <motion.a href="https://github.com/pafrasson" target={"_blank"}
+                    whileHover={{ y: -3 }}
+                    className="w-6 mx-3"
+                >
+                    <GithubIcon />
+                </motion.a>
+
+                <motion.a href="https://www.linkedin.com/in/pafrasson/" target={"_blank"}
+                    whileHover={{ y: -3 }}
+                    className="w-6 mx-3"
+                >
+                    <LinkedinIcon />
+                </motion.a>
+
+                <motion.a href="https://www.instagram.com/frass.io/" target={"_blank"}
+                    whileHover={{ y: -3 }}
+                    className="w-6 mx-3"
+                >
+                    <InstaIcon />
+                </motion.a>
             </nav>
         </header>
     )
