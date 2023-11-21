@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import profilepic from '../../public/images/profile/profile-port-hd.png'
 import AnimatedText from '@/components/AnimatedText'
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -18,8 +19,11 @@ export default function Home() {
               <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl' />
             </div>
             <div className='w-1/2 p-6 flex flex-col items-center self-center'>
-              <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl'/>
-              <p>Trilhando meu Caminho como desenvolvedor de Software,  com Aprendizado Contínuo e Comprometimento.</p>
+              <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl !text-left' />
+              <motion.p whileHover={{ y: -5 }} className='my-4 text-base font-medium'
+              >
+                Trilhando meu Caminho como desenvolvedor de Software,  com Aprendizado Contínuo e Comprometimento.
+              </motion.p>
             </div>
           </div>
         </Layout>
