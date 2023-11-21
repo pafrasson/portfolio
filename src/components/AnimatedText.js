@@ -9,8 +9,8 @@ const quote = {
         opacity: 1,
         transition: {
             delay: 0.5,
-            staggerChildren: 0.08,
-        }
+            
+        },
     }
 }
 
@@ -23,7 +23,7 @@ const singelWord = {
         opacity: 1,
         y: 0,
         transition: {
-            delay: 1,
+            delay: 0.5,
         }
     }
 }
