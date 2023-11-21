@@ -28,21 +28,21 @@ export default function Home() {
               </motion.p>
               <div className='flex items-center self-start mt-10'>
                 <Link href="/dummy.pdf" target={"_blank"}
-                className='flex items-center bg-orange-950 text-light p-2 px-5 
+                  className='flex items-center bg-orange-950 text-light p-2 px-5 
                 rounded-lg text-lg font-medium hover:bg-light hover:text-orange-950 
                 border-2 border-solid border-transparent hover:border-orange-950
                 '
-                download={true}
+                  download={true}
                 >Currículo <LinkArrow className={"w-6 ml-1"}></LinkArrow>
-                
+
                 </Link>
                 <Link href="https://wa.me/+5543991414043" target={"_blank"}
-                className='flex items-center bg-green-600 text-light p-2 px-5 
+                  className='flex items-center bg-green-600 text-light p-2 px-5 
                 rounded-lg text-lg font-medium hover:bg-light hover:text-green-600
                 border-2 border-solid border-transparent hover:border-green-600 ml-3
                 '
                 >Contato <WhatsappIcon className={"w-6 ml-1"}></WhatsappIcon>
-                
+
                 </Link>
               </div>
             </div>

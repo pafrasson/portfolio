@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { Roboto, Roboto_Serif } from "next/font/google"
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
+import Footer from '@/components/Footer'
 
 const roboto = Roboto_Serif({
   subsets: ['latin'],
@@ -17,8 +18,9 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${roboto.className} bg-light w-full min-h-screen`}>
-        <NavBar></NavBar>
+        <NavBar />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   )
