@@ -6,6 +6,15 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      keyframes: {
+        'trans-right': {
+          '0%,100%': {transform: 'translateX(5px)'},
+          '50%':{transform:'translateX(0px)'}
+        }
+      },
+      animation: {
+        'trans-right':'trans-right 1.5s ease-in-out infinite'
+      },
       fontFamily: {
         roboto: ["var(--font-roboto)", ...fontFamily.sans],
       },
