@@ -18,7 +18,7 @@ export default function Home() {
         <Layout className='pt-0'>
           <div className="flex items-center justify-between w-full">
             <div className='w-1/2'>
-              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl animate-trans-right' />
+              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl hover:animate-trans-right' />
             </div>
             <div className='w-1/2 p-6 flex flex-col items-center self-center'>
               <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl !text-left' />

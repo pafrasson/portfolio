@@ -8,8 +8,8 @@ module.exports = {
     extend: {
       keyframes: {
         'trans-right': {
-          '0%,100%': {transform: 'translateX(5px)'},
-          '50%':{transform:'translateX(0px)'}
+          '0%,100%': {transform: 'translateX(0px)'},
+          '50%':{transform:'translateX(5px)'}
         }
       },
       animation: {

@@ -7,9 +7,9 @@ const Footer = () => {
         <footer className="w-full border-t-2 border-solid border-dark 
         font-medium text-lg
         ">
-            <Layout className="py-8 flex items-center justify-between">
+            <Layout className="py-6 flex items-center justify-between bg-stone-700 text-light font-roboto">
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
-                <div>Build by<span className="underline font-semibold"> Pedro Frasson</span></div>
+                <div>Built by<span className="font-semibold"> Pedro Frasson</span></div>
             </Layout>
         </footer>
     )
