@@ -8,15 +8,27 @@ module.exports = {
     extend: {
       keyframes: {
         'trans-right': {
-          '0%,100%': {transform: 'translateX(0px)'},
-          '50%':{transform:'translateX(5px)'}
+          '0%,100%': { transform: 'translateX(0px)' },
+          '50%': { transform: 'translateX(5px)' }
+        },
+        wiggle: {
+          '100%, 0%': { transform: 'rotate(-0.5deg)' },
+          '50%': { transform: 'rotate(0.5deg)' },
         }
       },
       animation: {
-        'trans-right':'trans-right 1.5s ease-in-out infinite'
+        'trans-right': 'trans-right 1.5s ease-in-out infinite',
+        'wiggle': 'wiggle 1.5s ease-in-out infinite',
+        'spin-slow': 'spin 8s linear infinite'
+      },
+      backgroundImage: {
+        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);'
       },
       fontFamily: {
         roboto: ["var(--font-roboto)", ...fontFamily.sans],
+      },
+      fontSize: {
+        '8xl': '4rem', // Ajuste o tamanho conforme necessário
       },
       colors: {
         dark: "#1b1b1b",

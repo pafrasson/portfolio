@@ -17,9 +17,16 @@ export default function Home() {
       <main className='flex items-center text-dark w-full min-h-screen'>
         <Layout className='pt-0'>
           <div className="flex items-center justify-between w-full">
-            <div className='w-1/2'>
-              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl hover:animate-trans-right' />
-            </div>
+            <motion.div className='w-1/2'
+              style={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              whileTap={{
+                opacity: 1,
+                scale: 1.03,
+              }}
+              transition={{ duration: 0.6 }}>
+              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl' />
+            </motion.div>
             <div className='w-1/2 p-6 flex flex-col items-center self-center'>
               <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl !text-left' />
               <motion.p whileHover={{ y: -5 }} className='my-4 text-base font-semibold'

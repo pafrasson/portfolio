@@ -3,9 +3,10 @@ import Head from 'next/head'
 import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import Image from 'next/image'
-import profilepic from '../../public/images/profile/github_avatar.jpeg'
+import { motion } from "framer-motion";
 import javaheads from '../../public/images/profile/javaheads.png'
 import ideathon from '../../public/images/profile/ideathon.jpeg'
+import Skills from '@/components/Skills'
 
 const about = () => {
     return (
@@ -18,38 +19,57 @@ const about = () => {
                 <Layout className='pt-16 items-center justify-beetwen'>
                     <AnimatedText text="Empenho Gera Conquistas!" className='mb-16' />
                     <div className='grid w-full grid-cols-6 gap-16 items-center justify-self-center mx-auto'>
-                        <div className='col-span-3 flex flex-col items-start justify-start'>
-                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biografia</h2>
+                        <motion.div className='col-span-3 flex flex-col items-start justify-start'
+                            style={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.6 }}>
+                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>um pouco sobre mim</h2>
                             <p className='font-medium'>
-                                - Desde que comecei a estudar sobre a área de Tecnologia, estou sempre buscando novas ideias e aprimorando minhas habilidades, minha jornada inclui incursões em diversas linguagens de programação, frameworks inovadores e metodologias de desenvolvimento.
+                                - Desde que comecei a estudar sobre a área de Tecnologia,
+                                estou sempre buscando estudar novas tecnologias,
+                                frameworks inovadores e metodologias de desenvolvimento,
+                                que possam me ajudar a ser mais produtivo.
                             </p>
                             <p className='my-4 font-medium'>
-                                - A troca de experiências e perspectivas com colegas ao redor do globo não apenas amplia meu horizonte técnico, mas também molda minha visão de problemas complexos. A cada projeto prático, busco não apenas aplicar meu conhecimento, mas desafiar-me a encontrar soluções criativas, contribuindo assim para meu desenvolvimento profissional.
+                                - A troca de experiências e perspectivas com meus colegas não apenas amplia meu horizonte técnico,
+                                mas também molda minha visão sobre as coisas. Adoro participar de eventos, e conhecer pessoas com o mesmo
+                                objetivo que eu.
                             </p>
-                        </div>
+                        </motion.div>
                         <div className='col-span-3 relative h-max rounded-2x1 border-2 border-solid border-dark 
                         bg-light p-6
-                        '>
+                        '
+                        >
                             <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark' />
-                            <Image src={javaheads} alt='javaheads' className='w-full h-auto rounded-2x1' />
-
-                        </div>
-                        <div className='col-span-3 relative h-max rounded-2x1 border-2 border-solid border-dark 
-                        bg-light p-6
-                        '>
-                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark' />
-                            <Image src={ideathon} alt='ideathon' className='w-full h-auto rounded-2x1' />
-
-                        </div>
-                        <div className='col-span-3 flex flex-col items-end justify-beetwen'>
                             <div>
-                                <p className='font-medium inline-block'>
-                                    - A expansão das minhas habilidades não se restringe ao domínio técnico. Reconheço a importância do aprimoramento de habilidades interpessoais, gestão de projetos e compreensão das necessidades do cliente. Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às demandas e expectativas dos usuários.
-                                </p>
+                                <Image src={javaheads} alt='javaheads' className='w-full h-auto rounded-2x1' />
+                            </div>
+
+                        </div>
+                        <div className='col-span-3 relative h-max rounded-2x1 border-2 border-solid border-dark 
+                        bg-light p-6
+                        '
+                        >
+                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark' />
+                            <div>
+                                <Image src={ideathon} alt='ideathon' className='w-full h-auto rounded-2x1' />
                             </div>
                         </div>
-                        
+                        <div className='col-span-3 flex flex-col items-end justify-beetwen'>
+                            <motion.div style={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.6 }}>
+                                <p className='font-medium inline-block'>
+                                    - A cada projeto prático, busco não apenas aplicar meu conhecimento,
+                                    mas desafiar-me a encontrar soluções criativas, contribuindo assim para meu desenvolvimento profissional.
+                                    Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às demandas e expectativas dos usuários.
+                                </p>
+                            </motion.div>
+                        </div>
+
                     </div >
+
+                    <Skills />
                 </Layout >
             </main >
         </>
