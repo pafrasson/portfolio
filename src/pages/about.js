@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import javaheads from '../../public/images/profile/javaheads.png'
 import ideathon from '../../public/images/profile/ideathon.jpeg'
 import Skills from '@/components/Skills'
+import Experience from '@/components/Experience'
 
 const about = () => {
     return (
@@ -17,7 +18,7 @@ const about = () => {
             </Head>
             <main className='flex w-full flex-col items-center justify-center font-roboto mx-auto'>
                 <Layout className='pt-16 items-center justify-beetwen'>
-                    <AnimatedText text="Empenho Gera Conquistas!" className='mb-16' />
+                    <AnimatedText text="Empenho Gera Conquistas!" className='!mb-16' />
                     <div className='grid w-full grid-cols-6 gap-16 items-center justify-self-center mx-auto'>
                         <motion.div className='col-span-3 flex flex-col items-start justify-start'
                             style={{ opacity: 0 }}
@@ -26,8 +27,7 @@ const about = () => {
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>um pouco sobre mim</h2>
                             <p className='font-medium'>
                                 - Desde que comecei a estudar sobre a área de Tecnologia,
-                                estou sempre buscando estudar novas tecnologias,
-                                frameworks inovadores e metodologias de desenvolvimento,
+                                estou sempre buscando estudar novos frameworks e metodologias
                                 que possam me ajudar a ser mais produtivo.
                             </p>
                             <p className='my-4 font-medium'>
@@ -60,9 +60,8 @@ const about = () => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ duration: 0.6 }}>
                                 <p className='font-medium inline-block'>
-                                    - A cada projeto prático, busco não apenas aplicar meu conhecimento,
-                                    mas desafiar-me a encontrar soluções criativas, contribuindo assim para meu desenvolvimento profissional.
-                                    Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às demandas e expectativas dos usuários.
+                                    - Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às 
+                                    demandas e expectativas das pessoas.
                                 </p>
                             </motion.div>
                         </div>
@@ -70,6 +69,7 @@ const about = () => {
                     </div >
 
                     <Skills />
+                    <Experience/>
                 </Layout >
             </main >
         </>
