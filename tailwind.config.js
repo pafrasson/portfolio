@@ -25,7 +25,7 @@ module.exports = {
         circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);'
       },
       fontFamily: {
-        roboto: ["var(--font-roboto)", ...fontFamily.sans],
+        mono: ["var(--font-roboto)", ...fontFamily.mono],
       },
       fontSize: {
         '8xl': '4rem', // Ajuste o tamanho conforme necessário

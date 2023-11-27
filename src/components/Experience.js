@@ -34,7 +34,7 @@ const Experience = () => {
 
                 <div className='absolute left-8 top-0 w-[4-px] h-full bg-dark origin-top' />
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between mb-4'>
                     <Details
                         position="Code Update TQI - Backend com Kotlin e Java"
                         companyLink="https://www.dio.me/certificate/E91B312C"
@@ -49,7 +49,7 @@ const Experience = () => {
                         git="Meu repositório Github"
                     />
                 </ul>
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between mb-4'>
                     <Details
                         position="Code Update TQI - Backend com Kotlin e Java"
                         companyLink="https://www.dio.me/certificate/E91B312C"
@@ -64,7 +64,7 @@ const Experience = () => {
                         git="Meu repositório Github"
                     />
                 </ul>
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between mb-4'>
                     <Details
                         position="Code Update TQI - Backend com Kotlin e Java"
                         companyLink="https://www.dio.me/certificate/E91B312C"
