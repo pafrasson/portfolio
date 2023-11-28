@@ -84,7 +84,7 @@ const Experience = () => {
                         company="Gov. de Turismo"
                         time="Londrina - 2022"
                         work='Este evento foi uma oportunidade incrível para colocar em prática minhas SoftSkills.
-                         minha equipe idealizou uma solução inovadora para um problema real na indústria de eventos. Conversamos com pessoas da área para entender o problema e requisitos, elaboramos solução e apresentamos um protótipo visual para a banca de jurados. 
+                         minha equipe idealizou uma solução inovadora para um problema real na indústria de eventos. Conversamos com pessoas da área para entender o problema e requisitos, elaboramos a solução e apresentamos um protótipo visual para a banca de jurados. 
                         Todos os esforços, dedicação e trabalho em equipe valeram a pena quando ouvimos nosso nome como vencedores.'
                         certificateLink="https://www.instagram.com/p/CkHUaEJtjla/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
                         cert="ver mais "
