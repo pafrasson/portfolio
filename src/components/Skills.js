@@ -46,6 +46,7 @@ const Skills = () => {
                     <Skill name="AWS" x="-12vw" y="3vw" className='!bg-orange-400' />
                     <Skill name="Sqlite" x="10vw" y="9vw" className='!bg-blue-950' />
                     <Skill name="TailwindCSS" x="-22vw" y="14vw" className='!bg-cyan-400' />
+                    <Skill name="NodeJS" x="12vw" y="18vw" className='!bg-green-300' />
                 </div>
             </motion.div>
         </>
