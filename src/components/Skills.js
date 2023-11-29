@@ -20,11 +20,11 @@ const Skills = () => {
     return (
         <>
             <motion.div style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-                <h2 className='font-bold text-8xl mt-64 w-full text-center text-dark/75'>
+                <h2 className='font-bold text-8xl mt-64 w-full text-center text-dark/75 dark:text-light'>
                     Skills
                 </h2>
 
-                <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight'>
+                <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark'>
                     <motion.div className='flex items-center justify-center rounded-full font-semibold bg-dark text-light 
                 p-6 shadow-dark cursor-pointer
                 '

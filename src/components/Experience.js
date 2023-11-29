@@ -11,16 +11,20 @@ const Details = ({ position, company, companyLink, time, work, cert, certificate
             <h3 className='capitalize font-bold text-lg'>{position}&nbsp;<a href={companyLink}
                 target={"_blank"} className=' text-red-400 capitalize'>
                 @{company}</a></h3>
-            <span className='capitalize font-semibold text-dark/75'>
+            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300'>
                 {time}
             </span>
             <p className='font-medium w-full'>
                 {work}
             </p>
 
-            <a href={certificateLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75'>{cert}</a>
+            <a href={certificateLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75 dark:text-light
+            dark:hover:text-red-400
+            '>{cert}</a>
             <p></p>
-            <a href={githubLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75'>{git}</a>
+            <a href={githubLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75 dark:text-light
+            dark:hover:text-red-400
+            '>{git}</a>
 
         </motion.div>
     </li>
@@ -30,7 +34,7 @@ const Details = ({ position, company, companyLink, time, work, cert, certificate
 const Experience = () => {
     return (
         <motion.div className='my-64' style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light'>
                 Certificações e Experiências
             </h2>
 

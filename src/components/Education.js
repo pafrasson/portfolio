@@ -9,7 +9,7 @@ const Details = ({ type, time, place, info }) => {
             transition={{ duration: 0.5, type: "spring" }}
         >
             <h3 className='capitalize font-bold text-lg'>{type}</h3>
-            <span className='capitalize font-semibold text-dark/75'>
+            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300'>
                 {time} | {place}
             </span>
             <p className='font-medium w-full'>
@@ -23,7 +23,7 @@ const Details = ({ type, time, place, info }) => {
 const Education = () => {
     return (
         <motion.div className='my-64' style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light'>
                 Educação e Trabalho
             </h2>
 

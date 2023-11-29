@@ -17,7 +17,7 @@ const about = () => {
                 <title>Pedro Frasson | Sobre mim</title>
                 <meta name='description' content='any description' />
             </Head>
-            <main className='flex w-full flex-col items-center justify-center font-roboto mx-auto'>
+            <main className='flex w-full flex-col items-center justify-center font-roboto mx-auto dark:text-light'>
                 <Layout className='pt-16 items-center justify-beetwen'>
                     <AnimatedText text="Empenho Gera Conquistas!" className='!mb-16' />
                     <div className='grid w-full grid-cols-6 gap-16 items-center justify-self-center mx-auto'>
@@ -25,7 +25,7 @@ const about = () => {
                             style={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.6 }}>
-                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>um pouco sobre mim</h2>
+                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>um pouco sobre mim</h2>
                             <p className='font-medium'>
                                 - Desde que comecei a estudar sobre a área de Tecnologia,
                                 estou sempre buscando estudar novos frameworks e metodologias
@@ -41,7 +41,7 @@ const about = () => {
                         bg-light p-6
                         '
                         >
-                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark' />
+                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
                             <div>
                                 <Image src={javaheads} alt='javaheads' className='w-full h-auto rounded-2x1' />
                             </div>
@@ -51,7 +51,7 @@ const about = () => {
                         bg-light p-6
                         '
                         >
-                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark' />
+                            <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
                             <div>
                                 <Image src={ideathon} alt='ideathon' className='w-full h-auto rounded-2x1' />
                             </div>

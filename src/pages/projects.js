@@ -17,8 +17,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article className='w-full flex items-center justify-between relative rounded-br-2xl
     rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
+    dark:bg-dark dark:border-light
     '>
-      <div className='absolute top-2 -right-3 -z-10 w-[100%] h-[101%] rounded-[2.5rem] bg-dark
+      <div className='absolute top-2 -right-3 -z-10 w-[100%] h-[101%] rounded-[2.5rem] bg-dark dark:bg-light
       rounded-br-3xl
       ' />
       <Link href={link} target='_blank'
@@ -29,17 +30,17 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
         <span className='text-primary font-medium text-xl'>{type}</span>
-        <Link href={link} target='_blank' className='hover:underline underline-offset-1'>
-          <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+        <Link href={link} target='_blank' className='hover:underline underline-offset-1 dark:text-light'>
+          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark '>
+        <p className='my-2 font-medium text-dark dark:text-light '>
           {summary}
         </p>
         <div className='mt-2 flex items-center'>
-          <Link href={github} target='_blank' className='w-10'> <GithubIcon /> </Link>
+          <Link href={github} target='_blank' className='w-10 dark:text-light'> <GithubIcon /> </Link>
           <Link href={link} target='_blank'
             className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-            hover:bg-primary hover:text-dark
+            hover:bg-primary hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-primary
             '
           > Visitar Repositório </Link>
         </div>
@@ -113,7 +114,7 @@ const projects = () => {
             <div className='col-span-6'>
               <FeaturedProject
                 title="Credit Application System"
-                summary="API Rest para um Sistema de Analise de Solicitação de Crédito."
+                summary="API Rest para um Sistema de Análise de Solicitação de Crédito."
                 link="https://github.com/pafrasson/Credit-application-system-pafrasson"
                 github="https://github.com/pafrasson/Credit-application-system-pafrasson"
                 type="Kotlin + Spring Boot"

@@ -13,11 +13,11 @@ const roboto = Roboto_Serif({
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
+      <Head className="">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${roboto.className} bg-light w-full min-h-screen`}>
+      <main className={`${roboto.className} font-roboto bg-light dark:bg-dark w-full min-h-screen`}>
         <NavBar />
         <Component {...pageProps} />
         <Footer />
