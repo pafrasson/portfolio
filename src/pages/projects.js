@@ -6,12 +6,21 @@ import Link from "next/link";
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icons';
 import project1img from '../../public/images/projects/budgetplanner.png'
+import project2img from '../../public/images/projects/credit_API.png'
+import project3img from '../../public/images/projects/santander.png'
+import project4img from '../../public/images/projects/playermusic.png'
+import project5img from '../../public/images/projects/calcsalario.png'
+import project6img from '../../public/images/projects/passwordgen.png'
+import project7img from '../../public/images/projects/collections.png'
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className='w-full flex items-center justify-between
+    <article className='w-full flex items-center justify-between relative rounded-br-2xl
     rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
     '>
+      <div className='absolute top-2 -right-3 -z-10 w-[100%] h-[101%] rounded-[2.5rem] bg-dark
+      rounded-br-3xl
+      ' />
       <Link href={link} target='_blank'
         className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
       >
@@ -29,7 +38,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <div className='mt-2 flex items-center'>
           <Link href={github} target='_blank' className='w-10'> <GithubIcon /> </Link>
           <Link href={link} target='_blank'
-            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'
+            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
+            hover:bg-primary hover:text-dark
+            '
           > Visitar Repositório </Link>
         </div>
       </div>
@@ -40,7 +51,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className='w-full flex items-center justify-center rounded-2xl border border-solid
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid
      border-dark bg-light p-6 relative'>
       <Link href={link} target='_blank'
         className='w-full cursor-pointer overflow-hidden rounded-lg'
@@ -48,16 +59,18 @@ const Project = ({ title, type, img, link, github }) => {
         <Image src={img} alt={title} className='w-full h-auto rounded-3xl' />
       </Link>
 
-      <div className='w-full flex flex-col items-start justify-between pl-6'>
+      <div className='w-full flex flex-col items-start justify-between mt-4'>
         <span className='text-primary font-medium text-xl'>{type}</span>
         <Link href={link} target='_blank' className='hover:underline underline-offset-1'>
-          <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
         </Link>
 
-        <div className='mt-2 flex items-center'>
+        <div className='w-full mt-2 flex items-center'>
           <Link href={github} target='_blank' className='w-10'> <GithubIcon /> </Link>
           <Link href={link} target='_blank'
-            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'
+            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
+            hover:bg-primary hover:text-dark justify-between
+            '
           > Visitar Repositório </Link>
         </div>
       </div>
@@ -75,38 +88,77 @@ const projects = () => {
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
           <AnimatedText text="Superar, inovar, criar, descobrir." className='mb-16' />
-          <div className='grid grid-cols-12 gap-24'>
-            <div className='col-span-12'>
+          <div className='grid grid-cols-12 gap-24 gap-y-32'>
+            <div className='col-span-6'>
               <FeaturedProject
                 title="Gerenciador de Receita e Despesas"
                 summary="Aplicação web, é possível gerenciar despesas e receitas de tal dia, e visualizar
-                o valor total final de todas elas, foi utilizado sqlite como banco de dados e javascript para desenvolver a regra de negócio"
-                link="/"
-                github="/"
-                type="Featured Project"
+                o valor total final de todas elas, foi utilizado sqlite como banco de dados e javascript para desenvolver a regra de negócio."
+                link="https://github.com/pafrasson/budget-planner"
+                github="https://github.com/pafrasson/budget-planner"
+                type="Node + Javascript + Sqlite"
                 img={project1img}
               />
             </div>
             <div className='col-span-6'>
-              <Project
-                title="Gerenciador de Receita e Despesas"
-                link="/"
-                github="/"
-                type="Featured Project"
-                img={project1img}
+              <FeaturedProject
+                title="Password Generator"
+                summary="Gera uma senha aleatória utilizando a biblioteca Math JS."
+                link="https://github.com/pafrasson/gerador-de-senhas/tree/master"
+                github="https://github.com/pafrasson/gerador-de-senhas/tree/master"
+                type="JS + HTML + CSS"
+                img={project6img}
               />
             </div>
             <div className='col-span-6'>
-              project1
+              <FeaturedProject
+                title="Credit Application System"
+                summary="API Rest para um Sistema de Analise de Solicitação de Crédito."
+                link="https://github.com/pafrasson/Credit-application-system-pafrasson"
+                github="https://github.com/pafrasson/Credit-application-system-pafrasson"
+                type="Kotlin + Spring Boot"
+                img={project2img}
+              />
             </div>
-            <div className='col-span-12'>
-              Featured Project
+
+            <div className='col-span-6'>
+              <FeaturedProject
+                title="Collection Framework API"
+                summary="Repositório de estudos."
+                link="https://github.com/pafrasson/collection-framework-API"
+                github="https://github.com/pafrasson/collection-framework-API"
+                type="Java"
+                img={project7img}
+              />
             </div>
             <div className='col-span-6'>
-              Project 3
+              <FeaturedProject
+                title="SantanderApp Home"
+                link="https://github.com/pafrasson/Santander-home"
+                github="https://github.com/pafrasson/Santander-home"
+                type="Angular"
+                img={project3img}
+              />
             </div>
             <div className='col-span-6'>
-              Project 4
+              <FeaturedProject
+                title="Music Player"
+                summary="Simples player de músicas criado com Javascript."
+                link="https://github.com/pafrasson/projeto-player-de-musicas"
+                github="https://github.com/pafrasson/projeto-player-de-musicas"
+                type="JS + HTML + CSS"
+                img={project4img}
+              />
+            </div>
+            <div className='col-span-6'>
+              <FeaturedProject
+                title="RH page"
+                summary="Cálculo de Férias e Salário Líquido."
+                link="https://github.com/pafrasson/calcSalario"
+                github="https://github.com/pafrasson/calcSalario"
+                type="JS + HTML + CSS"
+                img={project5img}
+              />
             </div>
           </div>
         </Layout>
