@@ -61,7 +61,7 @@ const NavBar = () => {
 
     return (
         <header className={`${roboto.className} w-full px-36 py-8 font-medium flex items-center justify-between mt-2
-        dark:text-light relative
+        dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
         `}>
 
             <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
