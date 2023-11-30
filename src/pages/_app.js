@@ -3,6 +3,8 @@ import { Roboto, Roboto_Serif } from "next/font/google"
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
 import Footer from '@/components/Footer'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 const roboto = Roboto_Serif({
   subsets: ['latin'],
@@ -11,6 +13,7 @@ const roboto = Roboto_Serif({
 })
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   return (
     <>
       <Head className="">
@@ -19,7 +22,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       <main className={`${roboto.className} font-roboto bg-light dark:bg-dark w-full min-h-screen`}>
         <NavBar />
-        <Component {...pageProps} />
+        <AnimatePresence mode='wait'>
+          <Component key={router.asPath} {...pageProps} />
+        </AnimatePresence>
         <Footer />
       </main>
     </>

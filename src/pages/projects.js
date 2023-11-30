@@ -12,6 +12,7 @@ import project4img from '../../public/images/projects/playermusic.png'
 import project5img from '../../public/images/projects/calcsalario.png'
 import project6img from '../../public/images/projects/passwordgen.png'
 import project7img from '../../public/images/projects/collections.png'
+import Transition from '@/components/Transition';
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -98,6 +99,7 @@ const projects = () => {
         <title>Pedro Frasson | Projetos</title>
         <meta name='description' content='any description' />
       </Head>
+      <Transition/>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
           <AnimatedText text="Superar, inovar, criar, descobrir."

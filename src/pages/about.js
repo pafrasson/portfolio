@@ -9,6 +9,7 @@ import ideathon from '../../public/images/profile/ideathon.jpeg'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import Transition from '@/components/Transition'
 
 const about = () => {
     return (
@@ -17,6 +18,7 @@ const about = () => {
                 <title>Pedro Frasson | Sobre mim</title>
                 <meta name='description' content='any description' />
             </Head>
+            <Transition/>
             <main className='flex w-full flex-col items-center justify-center font-roboto mx-auto dark:text-light'>
                 <Layout className='pt-16 items-center justify-beetwen'>
                     <AnimatedText text="Empenho Gera Conquistas!" className='!mb-16 lg:!text-7x1 sm:!text-6xl xs:!text-4xl sm:mb-8' />
