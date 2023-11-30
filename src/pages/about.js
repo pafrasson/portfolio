@@ -43,7 +43,9 @@ const about = () => {
                         >
                             <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
                             <div>
-                                <Image src={javaheads} alt='javaheads' className='w-full h-auto rounded-2x1' />
+                                <Image src={javaheads} alt='javaheads' className='w-full h-auto rounded-2x1'
+                                    priority
+                                />
                             </div>
 
                         </div>
@@ -53,7 +55,9 @@ const about = () => {
                         >
                             <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
                             <div>
-                                <Image src={ideathon} alt='ideathon' className='w-full h-auto rounded-2x1' />
+                                <Image src={ideathon} alt='ideathon' className='w-full h-auto rounded-2x1'
+                                    priority
+                                />
                             </div>
                         </div>
                         <div className='col-span-3 flex flex-col items-end justify-beetwen'>
@@ -61,7 +65,7 @@ const about = () => {
                                 whileInView={{ opacity: 1 }}
                                 transition={{ duration: 0.6 }}>
                                 <p className='font-medium inline-block'>
-                                    - Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às 
+                                    - Estou comprometido em criar não apenas códigos eficientes, mas soluções que verdadeiramente atendam às
                                     demandas e expectativas das pessoas.
                                 </p>
                             </motion.div>
@@ -70,8 +74,8 @@ const about = () => {
                     </div >
 
                     <Skills />
-                    <Experience/>
-                    <Education/>
+                    <Experience />
+                    <Education />
                 </Layout >
             </main >
         </>

@@ -25,7 +25,9 @@ export default function Home() {
                 scale: 1.03,
               }}
               transition={{ duration: 0.6 }}>
-              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl' />
+              <Image src={profilepic} alt='PedroFrasson' className='w-full h-auto shadow-xl'
+                priority
+              />
             </motion.div>
             <div className='w-1/2 p-6 flex flex-col items-center self-center'>
               <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl !text-left' />
