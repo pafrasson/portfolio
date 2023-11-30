@@ -2,17 +2,21 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 const Details = ({ type, time, place, info }) => {
-    return <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
+    return <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between
+    md:w-[80%]
+    '>
         <motion.div
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5, type: "spring" }}
         >
-            <h3 className='capitalize font-bold text-lg'>{type}</h3>
-            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300'>
+            <h3 className='capitalize font-bold text-lg sm:text-xl xs:text-lg'>{type}</h3>
+            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300
+            xs:text-sm
+            '>
                 {time} | {place}
             </span>
-            <p className='font-medium w-full'>
+            <p className='font-medium w-full md:text-sm'>
                 {info}
             </p>
         </motion.div>
@@ -24,11 +28,12 @@ const Education = () => {
     return (
         <motion.div className='my-64' style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
             <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light
-            lg:!text-7x1 sm:!text-6xl xs:!text-4xl sm:mb-8'>
+            md:text-6xl xs:text-4xl md:mb-16
+            '>
                 Educação e Trabalho
             </h2>
 
-            <div className='w-[75%] mx-auto relative'>
+            <div className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
                 <div className='absolute left-8 top-0 w-[4-px] h-full bg-dark origin-top' />
 

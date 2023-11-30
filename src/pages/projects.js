@@ -18,20 +18,31 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
     <article className='w-full flex items-center justify-between relative rounded-br-2xl
     rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
     dark:bg-dark dark:border-light
+
+    lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
     '>
       <div className='absolute top-2 -right-3 -z-10 w-[100%] h-[101%] rounded-[2.5rem] bg-dark dark:bg-light
       rounded-br-3xl
+      xs:-right-2 sm:h-[100%] xs:w-full xs:rounded-[1.5rem]
       ' />
       <Link href={link} target='_blank'
-        className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
+        className='w-1/2 cursor-pointer overflow-hidden rounded-lg
+        lg:w-full
+        '
       >
         <Image src={img} alt={title} className='w-full h-auto rounded-3xl' />
       </Link>
 
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='text-primary font-medium text-xl'>{type}</span>
+      <div className='w-1/2 flex flex-col items-start justify-between pl-6
+      lg:w-full lg:pl-0 lg:pt-6
+      '>
+        <span className='text-primary font-medium text-xl
+        xs:text-base
+        '>{type}</span>
         <Link href={link} target='_blank' className='hover:underline underline-offset-1 dark:text-light'>
-          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light
+          sm:text-sm
+          '>{title}</h2>
         </Link>
         <p className='my-2 font-medium text-dark dark:text-light '>
           {summary}
@@ -41,6 +52,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           <Link href={link} target='_blank'
             className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
             hover:bg-primary hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-primary
+            sm:px-4 sm:text-base
             '
           > Visitar Repositório </Link>
         </div>
@@ -88,8 +100,12 @@ const projects = () => {
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
-          <AnimatedText text="Superar, inovar, criar, descobrir." className='mb-16' />
-          <div className='grid grid-cols-12 gap-24 gap-y-32'>
+          <AnimatedText text="Superar, inovar, criar, descobrir."
+            className='mb-16
+          lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl
+          ' />
+          <div className='grid grid-cols-12 gap-24 gap-y-32 
+          xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 sm:grid-cols-1'>
             <div className='col-span-6'>
               <FeaturedProject
                 title="Gerenciador de Receita e Despesas"
