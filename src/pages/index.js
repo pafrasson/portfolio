@@ -34,7 +34,7 @@ export default function Home() {
               <AnimatedText text="Escrevendo o Futuro com Linhas de Código." className='!text-6xl !text-left
                xl:!text-5xl lg:!text-center lg:!text-5xl md:!text5xl sm:!text-3xl
               ' />
-              <motion.p whileHover={{ y: -5 }} className='my-4 text-base font-semibold'
+              <motion.p whileHover={{ y: -5 }} className='my-4 text-base font-semibold md:text-sm sm:text-xs'
               >
                 Trilhando meu Caminho como desenvolvedor de Software,  com Aprendizado Contínuo e Comprometimento.
               </motion.p>
@@ -46,6 +46,8 @@ export default function Home() {
 
                 dark:bg-light dark:border-orange-950 dark:text-orange-950
                 dark:hover:bg-orange-950 dark:hover:text-light
+
+                md:p-2 md:px-4 md:text-base
                 '
                   download={true}
                 >Currículo <LinkArrow className={"w-6 ml-1"}></LinkArrow>
@@ -58,6 +60,8 @@ export default function Home() {
 
                 dark:bg-light dark:hover:bg-green-600 dark:hover:text-light
                  dark:text-green-600 dark:border-green-600
+
+                 md:p-2 md:px-4 md:text-base
                 '
                 >Contato <WhatsappIcon className={"w-6 ml-1"}></WhatsappIcon>
 
