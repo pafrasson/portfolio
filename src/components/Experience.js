@@ -2,28 +2,32 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 const Details = ({ position, company, companyLink, time, work, cert, certificateLink, githubLink, git }) => {
-    return <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
+    return <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between
+    md:w-[80%]
+    '>
         <motion.div
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5, type: "spring" }}
         >
-            <h3 className='capitalize font-bold text-lg'>{position}&nbsp;<a href={companyLink}
+            <h3 className='capitalize font-bold text-lg sm:text-xl xs:text-lg'>{position}&nbsp;<a href={companyLink}
                 target={"_blank"} className=' text-red-400 capitalize'>
                 @{company}</a></h3>
-            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300'>
+            <span className='capitalize font-semibold text-dark/75 dark:text-slate-300
+            xs:text-sm
+            '>
                 {time}
             </span>
-            <p className='font-medium w-full'>
+            <p className='font-medium w-full md:text-sm'>
                 {work}
             </p>
 
             <a href={certificateLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75 dark:text-light
-            dark:hover:text-red-400
+            dark:hover:text-red-400 xs:text-sm
             '>{cert}</a>
             <p></p>
             <a href={githubLink} target={"_blank"} className='hover:text-red-400 capitalize font-semibold text-dark/75 dark:text-light
-            dark:hover:text-red-400
+            dark:hover:text-red-400 xs:text-sm
             '>{git}</a>
 
         </motion.div>
@@ -34,11 +38,13 @@ const Details = ({ position, company, companyLink, time, work, cert, certificate
 const Experience = () => {
     return (
         <motion.div className='my-64' style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light
+            md:text-6xl xs:text-4xl md:mb-16
+            '>
                 Certificações e Experiências
             </h2>
 
-            <div className='w-[75%] mx-auto relative'>
+            <div className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
                 <div className='absolute left-8 top-0 w-[4-px] h-full bg-dark origin-top' />
 

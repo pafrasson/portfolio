@@ -23,7 +23,8 @@ const Details = ({ type, time, place, info }) => {
 const Education = () => {
     return (
         <motion.div className='my-64' style={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center text-dark/75 dark:text-light
+            lg:!text-7x1 sm:!text-6xl xs:!text-4xl sm:mb-8'>
                 Educação e Trabalho
             </h2>
 

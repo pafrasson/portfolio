@@ -19,9 +19,12 @@ const about = () => {
             </Head>
             <main className='flex w-full flex-col items-center justify-center font-roboto mx-auto dark:text-light'>
                 <Layout className='pt-16 items-center justify-beetwen'>
-                    <AnimatedText text="Empenho Gera Conquistas!" className='!mb-16' />
-                    <div className='grid w-full grid-cols-6 gap-16 items-center justify-self-center mx-auto'>
-                        <motion.div className='col-span-3 flex flex-col items-start justify-start'
+                    <AnimatedText text="Empenho Gera Conquistas!" className='!mb-16 lg:!text-7x1 sm:!text-6xl xs:!text-4xl sm:mb-8' />
+                    <div className='grid w-full grid-cols-6 gap-16 items-center justify-self-center mx-auto
+                    sm:gap-8
+                    '>
+                        <motion.div className='col-span-3 flex flex-col items-start justify-start
+                         xl:col-span-8 xl:items-center md:order-2'
                             style={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.6 }}>
@@ -38,7 +41,7 @@ const about = () => {
                             </p>
                         </motion.div>
                         <div className='col-span-3 relative h-max rounded-2x1 border-2 border-solid border-dark 
-                        bg-light p-6
+                        bg-light p-6 xl:col-span-8 md:order-2 xl:items-center
                         '
                         >
                             <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
@@ -50,7 +53,7 @@ const about = () => {
 
                         </div>
                         <div className='col-span-3 relative h-max rounded-2x1 border-2 border-solid border-dark 
-                        bg-light p-6
+                        bg-light p-6 xl:col-span-8
                         '
                         >
                             <div className='absolute top-2 -right-3 -z-10 w-[102%] h-[102%] rounded-2x1 bg-dark dark:bg-light/75' />
@@ -60,7 +63,7 @@ const about = () => {
                                 />
                             </div>
                         </div>
-                        <div className='col-span-3 flex flex-col items-end justify-beetwen'>
+                        <div className='col-span-3 flex flex-col items-end justify-beetwen xl:items-center xl:col-span-8 xl:flex-row md:order-3'>
                             <motion.div style={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ duration: 0.6 }}>
