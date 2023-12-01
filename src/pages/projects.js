@@ -21,6 +21,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
     dark:bg-dark dark:border-light
 
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
+    xl:rounded-2xl xl:rounded-br-3xl xl:p-8
     '>
       <div className='absolute top-2 -right-3 -z-10 w-[100%] h-[101%] rounded-[2.5rem] bg-dark dark:bg-light
       rounded-br-3xl
@@ -28,7 +29,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
       ' />
       <Link href={link} target='_blank'
         className='w-1/2 cursor-pointer overflow-hidden rounded-lg
-        lg:w-full
+        lg:w-full xl:w-full
         '
       >
         <Image src={img} alt={title} className='w-full h-auto rounded-3xl' />
@@ -39,10 +40,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
       '>
         <span className='text-primary font-medium text-xl
         xs:text-base
+        xl:text-lg
         '>{type}</span>
         <Link href={link} target='_blank' className='hover:underline underline-offset-1 dark:text-light'>
           <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light
           sm:text-sm
+          xl:text-2xl
           '>{title}</h2>
         </Link>
         <p className='my-2 font-medium text-dark dark:text-light '>
@@ -107,7 +110,7 @@ const projects = () => {
           lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl
           ' />
           <div className='grid grid-cols-12 gap-24 gap-y-32 
-          xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 sm:grid-cols-1'>
+          xl:gap-x-8 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 sm:grid-cols-1 2xl:grid-cols-6 lg:grid-cols-12'>
             <div className='col-span-6'>
               <FeaturedProject
                 title="Gerenciador de Receita e Despesas"
@@ -152,7 +155,7 @@ const projects = () => {
             </div>
             <div className='col-span-6'>
               <FeaturedProject
-                title="SantanderApp Home"
+                title="Santander Home"
                 link="https://github.com/pafrasson/Santander-home"
                 github="https://github.com/pafrasson/Santander-home"
                 type="Angular"
