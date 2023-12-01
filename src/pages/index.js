@@ -41,7 +41,7 @@ export default function Home() {
                 Trilhando meu Caminho como desenvolvedor de Software,  com Aprendizado Contínuo e Comprometimento.
               </motion.p>
               <div className='flex items-center self-start mt-10 lg:self-center'>
-                <Link href="/dummy.pdf" target={"_blank"}
+                <Link href="/pedro frasson.pdf" target={"_blank"}
                   className='flex items-center bg-orange-950 text-light p-2 px-5 
                 rounded-lg text-lg font-medium hover:bg-light hover:text-orange-950 
                 border-2 border-solid border-transparent hover:border-orange-950

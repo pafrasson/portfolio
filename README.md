@@ -10,9 +10,9 @@ To view the website, follow the link below👇: <br />
 [Meu portfolio nome](https://) <br />
 
 
-## Images of The Website:
+## Image of The Website:
 
-![Nextjs Portfolio Website](https://)
+![](./website%20images/home.png)
 
 
 ### Resources Used in This Project
