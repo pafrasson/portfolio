@@ -7,10 +7,10 @@
 [![](https://skillicons.dev/icons?i=react,next,tailwind,&theme=dark)](https://skillicons.dev)
 
 To view the website, follow the link below👇: <br />
-[Meu portfolio nome](https://) <br />
+[Meu portfolio](https://) <br />
 
 
-## Image of The Website:
+## Home of The Website:
 
 ![](./website%20images/home.png)
 
