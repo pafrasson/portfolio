@@ -60,7 +60,7 @@ const NavBar = () => {
     }
 
     return (
-        <header className={`${roboto.className} w-full px-36 py-8 font-medium flex items-center justify-between mt-2
+        <header className={`${roboto.className} w-full px-36 py-8 font-medium flex items-center justify-between
         dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
         `}>
 
